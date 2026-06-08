@@ -14,3 +14,6 @@
   "philosophy": "Break, Analyze, Rebuild",
   "current_tool": "Frida + Jetpack Compose"
 }
+<p align="center">
+  <img src="https://img.shields.io/badge/STATUS-SYSTEM_ONLINE-00FF66?style=for-the-badge&logo=hackthebox" />
+</p>
