@@ -26,7 +26,7 @@
       .name-text {
         font-family: 'JetBrains Mono', monospace;
         font-size: 72px;
-        font-weight: 800;
+        font-weight: 800; 
         fill: #3DDC84;
         filter: url(#glow);
       }
