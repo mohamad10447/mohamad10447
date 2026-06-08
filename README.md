@@ -1,8 +1,9 @@
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=800&size=25&duration=2500&pause=500&color=00FF66&width=800&lines=ROOT@BEIRUT:~#+INITIALIZING+SYSTEM...;ROOT@BEIRUT:~#+LOAD+ENGINEERING_MODULES...;ROOT@BEIRUT:~#+ACTIVATE+FRIDA_INJECTION...;ROOT@BEIRUT:~#+WELCOME+TO+MY+SECURE+DOMAIN" alt="Root Access" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=800&size=30&duration=3000&pause=500&color=3DDC84&width=800&lines=BUILDING+NATIVE+EXPERIENCES;CRAFTING+WITH+KOTLIN+&+COMPOSE;ENGINEERING+HIGH-PERFORMANCE+APPS;WELCOME+TO+MY+ANDROID+LAB" alt="Android Dev Animation" />
 </p>
+
 <p align="center">
-  <img src="https://img.shields.io/badge/STATUS-SYSTEM_ONLINE-00FF66?style=for-the-badge&logo=hackthebox" />
+  <img src="https://img.shields.io/badge/STATUS-COMPILATION_SUCCESSFUL-3DDC84?style=for-the-badge&logo=android&logoColor=white" />
 </p>
 
 ---
@@ -10,11 +11,14 @@
 ### 🖥️ `whoami`
 ```json
 {
-  "user": "Mohamad",
-  "location": "Beirut, Lebanon",
-  "authority": "ROOT",
-  "focus": ["Android Security", "Dynamic Instrumentation", "Reverse Engineering"],
-  "philosophy": "Break, Analyze, Rebuild",
-  "current_tool": "Frida + Jetpack Compose"
+  "developer": "Mohamad",
+  "domain": "Android Engineering",
+  "tech_stack": [
+    "Kotlin",
+    "Jetpack Compose",
+    "Coroutines",
+    "Architecture Components"
+  ],
+  "philosophy": "Write code that survives the test of time.",
+  "status": "Currently building scalable Android solutions"
 }
-
