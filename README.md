@@ -1,17 +1,19 @@
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=20&duration=4000&pause=500&color=00FF66&width=600&lines=root@beirut:~$;adb+shell;su;frida-server+-D;frida+-U+-l+bypass.js+-f+app.apk;[+]+Spawning+`app.apk`...;[+]+Hooking+SSLContext...;[+]+Bypass+active.+Intercepting." alt="Live Terminal Animation" />
+  <img src="https://raw.githubusercontent.com/mohamad10447/mohamad10447/main/ssets/terminal.gif" width="100%" alt="Hacker Terminal Animation" />
 </p>
 
 ---
 
-### `> whoami`
+<h2 align="center"><code>> whoami</code></h2>
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=3DDC84&width=500&lines=Mohamad+|+Android+Developer;Ethical+Hacker+&+Reverse+Engineer;Building+the+future+in+Beirut" alt="Typing animation" />
+</p>
 
 ```json
 {
-  "name": "Mohamad",
   "location": "Beirut, Lebanon",
-  "current_role": "Android Developer",
-  "focus": "Ethical Hacking & Mobile Security",
-  "debugging_style": "Log.d('DEBUG', data) + Frida 🛡️",
-  "compose_philosophy": "Jetpack Compose or nothing"
+  "focus": ["Android Security", "Frida", "Reverse Engineering"],
+  "philosophy": "Break it to build it better",
+  "debugging": "Log.d('DEBUG', data) + Frida 🛡️"
 }
