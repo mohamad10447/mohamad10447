@@ -1,34 +1,31 @@
-<h1 align="center">ANDROID DEVELOPER 📱 | SECURITY ENTHUSIAST 👾</h1>
-<h3 align="center">Building robust applications by day, learning to reverse-engineer them by night.</h3>
+<p align="center">
+  <img src="assets/banner.gif" width="100%" alt="Android Hacker Banner" />
+</p>
 
 <p align="center">
+  <img src="https://komarev.com/ghvc/?username=YOUR_GITHUB_USERNAME&label=PROFILE+VIEWS&color=00ff66&style=flat" alt="Views" />
   <a href="https://github.com/YOUR_GITHUB_USERNAME"><img src="https://img.shields.io/github/followers/YOUR_GITHUB_USERNAME?label=Followers&style=social" alt="Followers"></a>
-  <img src="https://komarev.com/ghvc/?username=YOUR_GITHUB_USERNAME&label=Profile%20Views&color=00ff66&style=flat" alt="Views" />
 </p>
 
 ---
 
 ### > whoami
 
-<img align="right" width="350" src="https://raw.githubusercontent.com/abedamouneh/abedamouneh/main/assets/dev.svg" alt="Developer Illustration" />
+<img align="right" width="380" src="assets/developer.svg" alt="Android Developer Illustration" />
 
 ```json
 {
-  "name": "Your Name",
-  "location": "Earth",
-  "current_role": "Android Developer",
-  "currently_learning": "Ethical Hacking & App Reverse Engineering",
-  "dev_stack": [
-    "kotlin       -> Primary weapon of choice",
-    "java         -> For legacy code & deep dives",
-    "compose      -> Modern UI building",
-    "android-sdk  -> Bread and butter"
+  "name": "Your Name Here",
+  "location": "Beirut, Lebanon",
+  "current_role": "Android Developer @ [Company / Freelance]",
+  "interest": "Ethical Hacking & Mobile App Reverse Engineering",
+  "building": [
+    "personal_projects",
+    "secure_codebase",
+    "malware_analysis_tools"
   ],
-  "hacker_arsenal": [
-    "jadx         -> Peeking under the hood of APKs",
-    "frida        -> Learning dynamic instrumentation",
-    "burp-suite   -> Intercepting API traffic"
-  ],
-  "mission": "Building seamless Android experiences while learning how attackers break them.",
-  "philosophy": "To write truly secure code, you first have to understand how to exploit it."
+  "shipped": "10+ Play Store Apps",
+  "philosophy": "Building apps that protect themselves.",
+  "debugging_style": "`Log.d('DEBUG', data)` and `frida -U` 🛡️",
+  "compose_philosophy": "Jetpack Compose or therapy"
 }
