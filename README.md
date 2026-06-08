@@ -90,136 +90,195 @@
     z-index: 2;
   }
 
-  /* ── HERO ── */
+  /* ── HERO TERMINAL ── */
   .hero {
-    text-align: center;
-    padding: 60px 0 50px;
+    padding: 48px 0 50px;
     position: relative;
   }
 
-  .hero-ring {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -60%);
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
-    border: 1px solid rgba(61,220,132,0.07);
-    animation: pulse-ring 4s ease-in-out infinite;
-    pointer-events: none;
-  }
-  .hero-ring:nth-child(2) {
-    width: 380px; height: 380px;
-    border-color: rgba(61,220,132,0.1);
-    animation-delay: -1s;
-  }
-  .hero-ring:nth-child(3) {
-    width: 260px; height: 260px;
-    border-color: rgba(61,220,132,0.15);
-    animation-delay: -2s;
-  }
-
-  @keyframes pulse-ring {
-    0%, 100% { opacity: 0.4; transform: translate(-50%, -60%) scale(1); }
-    50%       { opacity: 1;   transform: translate(-50%, -60%) scale(1.04); }
-  }
-
-  .hero-label {
-    font-size: 11px;
-    letter-spacing: 6px;
-    color: var(--green);
-    text-transform: uppercase;
+  /* terminal window */
+  .terminal {
+    background: #0a0a0a;
+    border: 1px solid rgba(61,220,132,0.25);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow:
+      0 0 0 1px rgba(0,0,0,0.6),
+      0 30px 80px rgba(0,0,0,0.7),
+      0 0 60px rgba(61,220,132,0.06);
     opacity: 0;
-    animation: fade-up 0.8s 0.2s ease forwards;
-    margin-bottom: 18px;
+    animation: fade-up 0.9s 0.1s ease forwards;
   }
 
-  .hero-name {
-    font-size: clamp(64px, 12vw, 110px);
+  /* title bar */
+  .term-bar {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 12px 18px;
+    background: #111;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    position: relative;
+  }
+  .term-btn {
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .term-btn.r { background: #ff5f57; box-shadow: 0 0 6px #ff5f5766; }
+  .term-btn.y { background: #febc2e; box-shadow: 0 0 6px #febc2e66; }
+  .term-btn.g { background: #28c840; box-shadow: 0 0 6px #28c84066; }
+  .term-title {
+    position: absolute;
+    left: 50%; transform: translateX(-50%);
+    font-size: 11px;
+    color: #555;
+    letter-spacing: 1px;
+  }
+  .term-badge {
+    margin-left: auto;
+    font-size: 10px;
+    color: var(--green);
+    opacity: 0.6;
+    letter-spacing: 2px;
+  }
+
+  /* terminal body */
+  .term-body {
+    padding: 28px 28px 32px;
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  /* each line */
+  .tline {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fade-in 0.01s ease forwards;
+  }
+
+  /* prompt pieces */
+  .p-root  { color: var(--green); font-weight: 800; }
+  .p-at    { color: #555; }
+  .p-host  { color: #79c0ff; font-weight: 600; }
+  .p-colon { color: #555; }
+  .p-path  { color: #cc99ff; }
+  .p-hash  { color: var(--green); font-weight: 800; margin: 0 6px 0 2px; }
+  .p-cmd   { color: var(--white); }
+  .p-flag  { color: #febc2e; }
+  .p-str   { color: #f97316; }
+  .p-comment { color: #3a3a3a; font-style: italic; }
+
+  /* output lines */
+  .tout {
+    padding-left: 0;
+    margin-bottom: 6px;
+    opacity: 0;
+    animation: fade-in 0.01s ease forwards;
+  }
+
+  /* blank spacer */
+  .tblank { margin-bottom: 18px; }
+
+  /* big name render */
+  .ascii-name {
+    font-size: clamp(36px, 8vw, 72px);
     font-weight: 800;
     color: var(--green);
-    letter-spacing: -3px;
+    letter-spacing: -1px;
     line-height: 1;
-    opacity: 0;
-    animation: fade-up 0.8s 0.4s ease forwards;
     text-shadow:
-      0 0 40px rgba(61,220,132,0.4),
-      0 0 80px rgba(61,220,132,0.15);
+      0 0 30px rgba(61,220,132,0.5),
+      0 0 70px rgba(61,220,132,0.2);
+    margin: 6px 0 4px 0;
+    display: block;
     position: relative;
-    display: inline-block;
   }
-
-  /* glitch effect */
-  .hero-name::before,
-  .hero-name::after {
+  .ascii-name::before,
+  .ascii-name::after {
     content: attr(data-text);
     position: absolute;
     top: 0; left: 0;
     width: 100%;
   }
-  .hero-name::before {
-    color: #00ffaa;
-    animation: glitch-1 5s 2s infinite;
-    clip-path: polygon(0 0, 100% 0, 100% 40%, 0 40%);
+  .ascii-name::before {
+    color: #00ffcc;
+    animation: glitch-1 6s 2s infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 38%, 0 38%);
   }
-  .hero-name::after {
+  .ascii-name::after {
     color: #3DDC84;
-    animation: glitch-2 5s 2.05s infinite;
-    clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+    animation: glitch-2 6s 2.1s infinite;
+    clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
   }
-
   @keyframes glitch-1 {
-    0%,94%,100% { transform: none; opacity: 0; }
-    95% { transform: translate(-3px, 1px); opacity: 0.6; }
-    96% { transform: translate(3px, -1px); opacity: 0.6; }
-    97% { transform: translate(-2px, 2px); opacity: 0.6; }
-    98% { transform: none; opacity: 0; }
+    0%,92%,100% { transform: none; opacity: 0; }
+    93% { transform: translate(-4px, 1px); opacity: 0.7; }
+    94% { transform: translate(4px, -2px); opacity: 0.7; }
+    95% { transform: translate(-2px, 3px); opacity: 0.7; }
+    96% { transform: none; opacity: 0; }
   }
   @keyframes glitch-2 {
-    0%,94%,100% { transform: none; opacity: 0; }
-    95% { transform: translate(3px, -1px); opacity: 0.5; }
-    96% { transform: translate(-3px, 1px); opacity: 0.5; }
-    97% { transform: translate(2px, -2px); opacity: 0.5; }
-    98% { transform: none; opacity: 0; }
+    0%,92%,100% { transform: none; opacity: 0; }
+    93% { transform: translate(4px, -1px); opacity: 0.5; }
+    94% { transform: translate(-4px, 2px); opacity: 0.5; }
+    95% { transform: translate(2px, -3px); opacity: 0.5; }
+    96% { transform: none; opacity: 0; }
   }
 
-  .hero-role {
-    font-size: clamp(14px, 3vw, 20px);
-    color: var(--gray);
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-weight: 300;
-    opacity: 0;
-    animation: fade-up 0.8s 0.6s ease forwards;
-    margin-top: 12px;
+  .nick-tag {
+    display: inline-block;
+    font-size: 13px;
+    color: #79c0ff;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
   }
-  .hero-role span {
-    color: var(--green);
-    font-weight: 600;
-  }
+  .nick-tag .at-sym { color: var(--green); }
 
-  .hero-status {
+  /* role badge */
+  .role-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 4px;
+  }
+  .role-pill {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    margin-top: 28px;
-    padding: 8px 20px;
-    border: 1px solid var(--border);
-    border-radius: 999px;
+    padding: 6px 16px;
+    background: rgba(61,220,132,0.08);
+    border: 1px solid rgba(61,220,132,0.3);
+    border-radius: 6px;
     font-size: 12px;
     color: var(--green);
-    background: var(--green-glow);
-    opacity: 0;
-    animation: fade-up 0.8s 0.8s ease forwards;
-    backdrop-filter: blur(8px);
+    letter-spacing: 2px;
   }
+
+  /* blinking block cursor */
+  .block-cursor {
+    display: inline-block;
+    width: 10px; height: 18px;
+    background: var(--green);
+    margin-left: 2px;
+    vertical-align: middle;
+    animation: blink-block 1s step-end infinite;
+    box-shadow: 0 0 8px var(--green);
+  }
+  @keyframes blink-block {
+    0%,100% { opacity: 1; } 50% { opacity: 0; }
+  }
+
   .dot {
     width: 8px; height: 8px;
     background: var(--green);
     border-radius: 50%;
     animation: blink 1.4s ease-in-out infinite;
     box-shadow: 0 0 8px var(--green);
+    display: inline-block;
   }
   @keyframes blink {
     0%,100% { opacity: 1; } 50% { opacity: 0.2; }
@@ -526,18 +585,65 @@
 
 <div class="container">
 
-  <!-- HERO -->
+  <!-- HERO TERMINAL -->
   <div class="hero">
-    <div class="hero-ring"></div>
-    <div class="hero-ring"></div>
-    <div class="hero-ring"></div>
-    <p class="hero-label">// portfolio.readme.md</p>
-    <h1 class="hero-name" data-text="MOHAMAD">MOHAMAD</h1>
-    <p class="hero-role"><span>Android</span> Developer</p>
-    <div class="hero-status">
-      <span class="dot"></span>
-      Building in production &nbsp;·&nbsp; Open to collaborate
-    </div>
+    <div class="terminal">
+
+      <!-- title bar -->
+      <div class="term-bar">
+        <div class="term-btn r"></div>
+        <div class="term-btn y"></div>
+        <div class="term-btn g"></div>
+        <span class="term-title">bash — zsh — 80×24</span>
+        <span class="term-badge">SSH ●</span>
+      </div>
+
+      <!-- terminal body -->
+      <div class="term-body">
+
+        <!-- line 1: whoami -->
+        <div class="tline" id="l1">
+          <span class="p-root">root</span><span class="p-at">@</span><span class="p-host">github</span><span class="p-colon">:</span><span class="p-path">~/profile</span><span class="p-hash">#</span>
+          <span class="p-cmd">whoami <span class="p-flag">--verbose</span></span>
+        </div>
+
+        <!-- output block -->
+        <div class="tout tblank" id="out1" style="padding-left:0; margin-top:20px;">
+          <span class="ascii-name" data-text="MOHAMAD">MOHAMAD</span>
+          <span class="nick-tag"><span class="at-sym">@</span>M_One</span>
+          <div class="role-line">
+            <div class="role-pill">
+              <span class="dot"></span>
+              Android Developer
+            </div>
+          </div>
+        </div>
+
+        <!-- line 2: cat identity -->
+        <div class="tline" id="l2" style="margin-top:24px;">
+          <span class="p-root">root</span><span class="p-at">@</span><span class="p-host">github</span><span class="p-colon">:</span><span class="p-path">~/profile</span><span class="p-hash">#</span>
+          <span class="p-cmd">cat <span class="p-str">identity.json</span></span>
+        </div>
+
+        <!-- json output -->
+        <div class="tout" id="out2" style="margin-top:10px; padding-left:0; color:#8892a4; font-size:13px; line-height:2;">
+<span style="color:#555">{</span><br>
+&nbsp;&nbsp;<span style="color:#79c0ff">"name"</span><span style="color:#555">:</span> <span style="color:#f97316">"Mohamad"</span><span style="color:#555">,</span><br>
+&nbsp;&nbsp;<span style="color:#79c0ff">"alias"</span><span style="color:#555">:</span> <span style="color:#f97316">"M_One"</span><span style="color:#555">,</span><br>
+&nbsp;&nbsp;<span style="color:#79c0ff">"role"</span><span style="color:#555">:</span> <span style="color:#f97316">"Android Developer"</span><span style="color:#555">,</span><br>
+&nbsp;&nbsp;<span style="color:#79c0ff">"stack"</span><span style="color:#555">:</span> <span style="color:#555">[</span><span style="color:#f97316">"Kotlin"</span><span style="color:#555">,</span> <span style="color:#f97316">"Jetpack Compose"</span><span style="color:#555">,</span> <span style="color:#f97316">"Coroutines"</span><span style="color:#555">],</span><br>
+&nbsp;&nbsp;<span style="color:#79c0ff">"status"</span><span style="color:#555">:</span> <span style="color:var(--green)">"🟢 Building in production"</span><br>
+<span style="color:#555">}</span>
+        </div>
+
+        <!-- line 3: prompt waiting -->
+        <div class="tline" id="l3" style="margin-top:20px;">
+          <span class="p-root">root</span><span class="p-at">@</span><span class="p-host">github</span><span class="p-colon">:</span><span class="p-path">~/profile</span><span class="p-hash">#</span>
+          <span class="block-cursor"></span>
+        </div>
+
+      </div><!-- /term-body -->
+    </div><!-- /terminal -->
   </div>
 
   <!-- DIVIDER -->
@@ -637,6 +743,13 @@
 </div>
 
 <script>
+  /* ── Terminal typing reveal ── */
+  const delays = { l1: 300, out1: 700, l2: 1600, out2: 2000, l3: 2800 };
+  Object.entries(delays).forEach(([id, ms]) => {
+    const el = document.getElementById(id);
+    if (el) setTimeout(() => { el.style.opacity = '1'; }, ms);
+  });
+
   /* ── Particles ── */
   const container = document.getElementById('particles');
   for (let i = 0; i < 40; i++) {
