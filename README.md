@@ -1,14 +1,16 @@
-<h1 align="center">Mohamad | Android Security & Engineering</h1>
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=800&size=25&duration=2500&pause=500&color=00FF66&width=800&lines=ROOT@BEIRUT:~#+INITIALIZING+SYSTEM...;ROOT@BEIRUT:~#+LOAD+ENGINEERING_MODULES...;ROOT@BEIRUT:~#+ACTIVATE+FRIDA_INJECTION...;ROOT@BEIRUT:~#+WELCOME+TO+MY+SECURE+DOMAIN" alt="Root Access" />
+</p>
 
 ---
 
-### 1. Identity Configuration
+### 🖥️ `whoami`
 ```json
 {
-  "name": "Mohamad",
+  "user": "Mohamad",
   "location": "Beirut, Lebanon",
-  "role": "Android Developer",
-  "specialization": "Reverse Engineering & Mobile Security",
-  "current_focus": "Frida Instrumentation & Jetpack Compose",
-  "status": "ROOT_ACCESS_GRANTED"
+  "authority": "ROOT",
+  "focus": ["Android Security", "Dynamic Instrumentation", "Reverse Engineering"],
+  "philosophy": "Break, Analyze, Rebuild",
+  "current_tool": "Frida + Jetpack Compose"
 }
