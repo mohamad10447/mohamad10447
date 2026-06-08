@@ -1,18 +1,14 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=28&duration=2500&pause=800&color=3DDC84&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=100&lines=⚡+Android+Engineer;🛠️+Kotlin+%7C+Jetpack+Compose+%7C+Coroutines;📱+Building+Native+Experiences" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=32&duration=2500&pause=800&color=3DDC84&center=true&vCenter=true&repeat=true&width=700&height=60&lines=Android+Engineer+%E2%9A%A1;Kotlin+%7C+Jetpack+Compose+%7C+Coroutines;Building+Native+Experiences+%F0%9F%93%B1;Write+code+that+survives+the+test+of+time." alt="Typing SVG" />
 
 <br/>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=venom&color=0:0d0d0d,40:0a1628,100:3DDC84&height=220&section=header&text=MOHAMAD&fontSize=90&fontColor=3DDC84&fontAlignY=55&strokeWidth=2&stroke=3DDC84&animation=blinking" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=venom&color=0:0d0d0d,40:0a1628,100:3DDC84&height=250&section=header&text=MOHAMAD&fontSize=100&fontColor=3DDC84&fontAlignY=55&strokeWidth=2&stroke=3DDC84&animation=blinking&desc=Android+Engineer&descSize=22&descColor=ffffff&descAlignY=72" />
 
-</div>
+<br/>
 
----
-
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/Mohamad/Mohamad/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" />
+![](https://hit.yhype.me/github/profile?user_id=YOUR_ID)
 
 </div>
 
@@ -120,6 +116,10 @@ val techStack = buildList {
 ---
 
 <div align="center">
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=14&duration=3000&pause=1000&color=3DDC84&center=true&vCenter=true&width=500&lines=Thanks+for+visiting+%F0%9F%91%BE;Star+something+if+it+helped+%E2%AD%90;Always+open+to+collaborate+%F0%9F%A4%9D" alt="Footer typing" />
+
+<br/><br/>
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:3DDC84,50:1a1a2e,100:0d0d0d&height=140&section=footer&animation=twinkling" />
 
