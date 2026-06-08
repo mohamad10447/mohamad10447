@@ -3,7 +3,7 @@
 <!-- Then replace YOUR_USERNAME with your actual GitHub username -->
 
 <div align="center">
-  <a href="https://github.com/mohamad10447/mohamad10447/blob/main/assets/hero.html" target="_blank">
+  <a href="https://mohamad10447.github.io/mohamad10447/assets/hero.html" target="_blank">
     <img
       src="https://YOUR_USERNAME.github.io/YOUR_REPO/assets/hero-screenshot.png"
       alt="M_One — Mohamad — Android Developer"
