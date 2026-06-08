@@ -1,21 +1,21 @@
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0f0f0f,50:1a1a2e,100:3DDC84&height=200&section=header&text=Mohamad&fontSize=80&fontColor=3DDC84&fontAlignY=38&desc=Android%20Engineer&descAlignY=60&descSize=22&descColor=ffffff&animation=fadeIn" />
-
-</div>
+<!-- Animated typing header -->
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=28&duration=2500&pause=800&color=3DDC84&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=100&lines=⚡+Android+Engineer;🛠️+Kotlin+%7C+Jetpack+Compose+%7C+Coroutines;📱+Building+Native+Experiences" alt="Typing SVG" />
 
 <br/>
 
+<!-- Glitch/animated name banner -->
+<img width="100%" src="https://capsule-render.vercel.app/api?type=venom&color=0:0d0d0d,40:0a1628,100:3DDC84&height=220&section=header&text=MOHAMAD&fontSize=90&fontColor=3DDC84&fontAlignY=55&strokeWidth=2&stroke=3DDC84&animation=blinking" />
+
+</div>
+
+---
+
 <div align="center">
 
-```
-  ██████╗  ██████╗ ██╗██████╗     ██████╗ ███████╗██╗   ██╗
-  ██╔══██╗██╔═══██╗██║██╔══██╗    ██╔══██╗██╔════╝██║   ██║
-  ██║  ██║██║   ██║██║██║  ██║    ██║  ██║█████╗  ██║   ██║
-  ██║  ██║██║   ██║██║██║  ██║    ██║  ██║██╔══╝  ╚██╗ ██╔╝
-  ██████╔╝╚██████╔╝██║██████╔╝    ██████╔╝███████╗ ╚████╔╝ 
-  ╚═════╝  ╚═════╝ ╚═╝╚═════╝     ╚═════╝ ╚══════╝  ╚═══╝  
-```
+<!-- Snake animation - auto-generates from GitHub activity -->
+<img src="https://raw.githubusercontent.com/Mohamad/Mohamad/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" />
 
 </div>
 
@@ -25,16 +25,18 @@
 <tr>
 <td align="center" width="50%">
 
-### `> identity.json`
+### `> identity.kt`
 
 ```kotlin
 data class Developer(
-    val name: String      = "Mohamad",
-    val role: String      = "Android Engineer",
-    val focus: String     = "Native • Kotlin • Compose",
-    val motto: String     = "Write code that survives
-                             the test of time",
-    val status: String    = "🟢 Building in production"
+    val name: String   = "Mohamad",
+    val role: String   = "Android Engineer",
+    val focus: String  = "Native • Kotlin • Compose",
+    val motto: String  = """
+        Write code that survives
+        the test of time.
+    """.trimIndent(),
+    val status: String = "🟢 Building in production"
 )
 ```
 
@@ -62,24 +64,8 @@ val techStack = buildList {
 
 <div align="center">
 
-## ⚡ Arsenal
-
-<br/>
-
-![Kotlin](https://img.shields.io/badge/Kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)
-![Android](https://img.shields.io/badge/Android-%233DDC84.svg?style=for-the-badge&logo=android&logoColor=white)
-![Jetpack Compose](https://img.shields.io/badge/Jetpack_Compose-%234285F4.svg?style=for-the-badge&logo=jetpackcompose&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-%23FFCA28.svg?style=for-the-badge&logo=firebase&logoColor=black)
-
-![Coroutines](https://img.shields.io/badge/Coroutines_%26_Flow-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white)
-![Room](https://img.shields.io/badge/Room_DB-%233DDC84.svg?style=for-the-badge&logo=android&logoColor=white)
-![Hilt](https://img.shields.io/badge/Hilt_DI-%234285F4.svg?style=for-the-badge&logo=google&logoColor=white)
-![Retrofit](https://img.shields.io/badge/Retrofit-%2348B983.svg?style=for-the-badge&logo=square&logoColor=white)
-
-![Git](https://img.shields.io/badge/Git-%23F05032.svg?style=for-the-badge&logo=git&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-%232088FF.svg?style=for-the-badge&logo=githubactions&logoColor=white)
-![Gradle](https://img.shields.io/badge/Gradle-%2302303A.svg?style=for-the-badge&logo=gradle&logoColor=white)
-![Figma](https://img.shields.io/badge/Figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
+<!-- Animated activity graph -->
+<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=Mohamad&bg_color=0d1117&color=3DDC84&line=3DDC84&point=ffffff&area=true&hide_border=true&area_color=1a3a2a" alt="Activity Graph" />
 
 </div>
 
@@ -102,23 +88,6 @@ val techStack = buildList {
 
 ---
 
-<div align="center">
-
-## 📊 GitHub Stats
-
-<br/>
-
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=Mohamad&show_icons=true&theme=radical&hide_border=true&bg_color=0d1117&title_color=3DDC84&icon_color=3DDC84&text_color=ffffff&ring_color=3DDC84" />
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mohamad&layout=compact&theme=radical&hide_border=true&bg_color=0d1117&title_color=3DDC84&text_color=ffffff" />
-
-<br/><br/>
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=Mohamad&theme=radical&hide_border=true&background=0d1117&ring=3DDC84&fire=3DDC84&currStreakLabel=3DDC84" />
-
-</div>
-
----
-
 ## 🚀 What I'm Shipping
 
 ```
@@ -135,21 +104,7 @@ val techStack = buildList {
 
 <div align="center">
 
-## 🔗 Connect
-
-<br/>
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/YOUR_USERNAME)
-[![Twitter](https://img.shields.io/badge/X_%2F_Twitter-%23000000.svg?style=for-the-badge&logo=x&logoColor=white)](https://x.com/YOUR_USERNAME)
-[![Gmail](https://img.shields.io/badge/Email-%23EA4335.svg?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your@email.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-%233DDC84.svg?style=for-the-badge&logo=android&logoColor=white)](https://yoursite.com)
-
-<br/>
-
-![Profile Views](https://komarev.com/ghpvc/?username=Mohamad&color=3DDC84&style=for-the-badge&label=PROFILE+VIEWS)
-
-<br/><br/>
-
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:3DDC84,50:1a1a2e,100:0f0f0f&height=120&section=footer" />
+<!-- Animated footer wave -->
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:3DDC84,50:1a1a2e,100:0d0d0d&height=140&section=footer&animation=twinkling" />
 
 </div>
