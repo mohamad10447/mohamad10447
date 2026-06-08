@@ -1,28 +1,15 @@
+<!-- HERO: rendered from assets/hero.html via GitHub Pages -->
+<!-- To activate: enable GitHub Pages on your repo (Settings → Pages → Deploy from branch: main, folder: /root) -->
+<!-- Then replace YOUR_USERNAME with your actual GitHub username -->
+
 <div align="center">
-
-<!-- Terminal window simulation -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:0d0d0d,100:0d0d0d&height=14&section=header" />
-
-```
-┌─────────────────────────────────────────────────────────────────────────┐
-│  bash — zsh — 80×24                                          ● ● ●      │
-└─────────────────────────────────────────────────────────────────────────┘
-```
-
-```console
-root@github:~/profile# whoami --verbose
-```
-
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=52&duration=1&pause=99999&color=3DDC84&center=true&vCenter=true&repeat=false&width=700&height=70&lines=MOHAMAD" alt="Name" />
-
-```console
-alias  : M_One
-role   : Android Developer
-status : 🟢 Building in production
-```
-
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=13&duration=2000&pause=1000&color=3DDC84&center=true&vCenter=true&repeat=true&width=700&height=30&lines=root%40github%3A~%2Fprofile%23+cat+identity.json...;root%40github%3A~%2Fprofile%23+ls+-la+skills%2F...;root%40github%3A~%2Fprofile%23+git+log+--oneline...;root%40github%3A~%2Fprofile%23+%E2%96%8C" alt="Typing prompt" />
-
+  <a href="https://YOUR_USERNAME.github.io/YOUR_REPO/assets/hero.html" target="_blank">
+    <img
+      src="https://YOUR_USERNAME.github.io/YOUR_REPO/assets/hero-screenshot.png"
+      alt="M_One — Mohamad — Android Developer"
+      width="100%"
+    />
+  </a>
 </div>
 
 ---
@@ -123,8 +110,8 @@ val techStack = buildList {
 <div align="center">
 
 ```console
-root@github:~/profile# echo "Thanks for visiting, star if it helped ⭐"
-Thanks for visiting, star if it helped ⭐
+root@github:~/profile# echo "Thanks for visiting ⭐"
+Thanks for visiting ⭐
 
 root@github:~/profile# ▌
 ```
