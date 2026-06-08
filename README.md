@@ -1,14 +1,10 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=32&duration=2500&pause=800&color=3DDC84&center=true&vCenter=true&repeat=true&width=700&height=60&lines=Android+Engineer+%E2%9A%A1;Kotlin+%7C+Jetpack+Compose+%7C+Coroutines;Building+Native+Experiences+%F0%9F%93%B1;Write+code+that+survives+the+test+of+time." alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=32&duration=2500&pause=800&color=3DDC84&center=true&vCenter=true&repeat=true&width=700&height=60&lines=Android+Developer+%E2%9A%A1;Kotlin+%7C+Jetpack+Compose+%7C+Coroutines;Building+Native+Experiences+%F0%9F%93%B1;Write+code+that+survives+the+test+of+time." alt="Typing SVG" />
 
 <br/>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=venom&color=0:0d0d0d,40:0a1628,100:3DDC84&height=250&section=header&text=MOHAMAD&fontSize=100&fontColor=3DDC84&fontAlignY=55&strokeWidth=2&stroke=3DDC84&animation=blinking&desc=Android+Engineer&descSize=22&descColor=ffffff&descAlignY=72" />
-
-<br/>
-
-![](https://hit.yhype.me/github/profile?user_id=YOUR_ID)
+<img width="100%" src="https://capsule-render.vercel.app/api?type=venom&color=0:0d0d0d,40:0a1628,100:3DDC84&height=250&section=header&text=MOHAMAD&fontSize=100&fontColor=3DDC84&fontAlignY=55&strokeWidth=2&stroke=3DDC84&animation=blinking&desc=Android+Developer&descSize=22&descColor=ffffff&descAlignY=72" />
 
 </div>
 
@@ -19,7 +15,7 @@
 ```json
 {
   "developer"   : "Mohamad",
-  "domain"      : "Android Engineering",
+  "domain"      : "Android Development",
   "tech_stack"  : [
                     "Kotlin",
                     "Jetpack Compose",
@@ -44,7 +40,7 @@
 ```kotlin
 data class Developer(
     val name: String   = "Mohamad",
-    val role: String   = "Android Engineer",
+    val role: String   = "Android Developer",
     val focus: String  = "Native • Kotlin • Compose",
     val motto: String  = """
         Write code that survives
@@ -73,14 +69,6 @@ val techStack = buildList {
 </td>
 </tr>
 </table>
-
----
-
-<div align="center">
-
-<img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=Mohamad&bg_color=0d1117&color=3DDC84&line=3DDC84&point=ffffff&area=true&hide_border=true&area_color=1a3a2a" alt="Activity Graph" />
-
-</div>
 
 ---
 
