@@ -1,0 +1,275 @@
+<svg width="900" height="420" viewBox="0 0 900 420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&amp;display=swap');
+
+      .bg { fill: #0d0d0d; }
+      .terminal-border { fill: #0a0a0a; stroke: #3DDC84; stroke-width: 1; stroke-opacity: 0.3; }
+      .titlebar { fill: #111111; }
+      .titlebar-border { fill: none; stroke: #ffffff; stroke-width: 0.5; stroke-opacity: 0.06; }
+
+      .btn-r { fill: #ff5f57; }
+      .btn-y { fill: #febc2e; }
+      .btn-g { fill: #28c840; }
+
+      .term-title { font-family: 'JetBrains Mono', monospace; font-size: 11px; fill: #555555; }
+      .ssh-badge  { font-family: 'JetBrains Mono', monospace; font-size: 10px; fill: #3DDC84; opacity: 0.6; }
+
+      .p-root  { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 800; fill: #3DDC84; }
+      .p-at    { font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #555555; }
+      .p-host  { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600; fill: #79c0ff; }
+      .p-path  { font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #cc99ff; }
+      .p-hash  { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 800; fill: #3DDC84; }
+      .p-cmd   { font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #ffffff; }
+      .p-flag  { font-family: 'JetBrains Mono', monospace; font-size: 13px; fill: #febc2e; }
+
+      .name-text {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 72px;
+        font-weight: 800;
+        fill: #3DDC84;
+        filter: url(#glow);
+      }
+      .nick-text {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 15px;
+        font-weight: 600;
+        fill: #79c0ff;
+        letter-spacing: 4px;
+      }
+      .at-green { fill: #3DDC84; }
+
+      .role-bg   { fill: rgba(61,220,132,0.08); stroke: #3DDC84; stroke-width: 1; stroke-opacity: 0.3; rx: 6; }
+      .role-text { font-family: 'JetBrains Mono', monospace; font-size: 12px; fill: #3DDC84; letter-spacing: 2px; }
+
+      .dot { fill: #3DDC84; }
+
+      .json-bracket { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; fill: #555555; }
+      .json-key     { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; fill: #79c0ff; }
+      .json-colon   { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; fill: #555555; }
+      .json-str     { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; fill: #f97316; }
+      .json-green   { font-family: 'JetBrains Mono', monospace; font-size: 12.5px; fill: #3DDC84; }
+
+      .scanline {
+        fill: none;
+        stroke: #3DDC84;
+        stroke-width: 1;
+        opacity: 0.4;
+      }
+
+      /* ── ANIMATIONS ── */
+
+      /* fade-in for terminal */
+      .terminal-group {
+        animation: fadeSlideUp 0.8s ease forwards;
+        opacity: 0;
+      }
+      @keyframes fadeSlideUp {
+        from { opacity: 0; transform: translateY(16px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      /* line 1 prompt */
+      .line1 { opacity: 0; animation: appear 0.1s 0.5s forwards; }
+      /* name */
+      .line-name { opacity: 0; animation: appear 0.1s 1.1s forwards; }
+      /* nick */
+      .line-nick { opacity: 0; animation: appear 0.1s 1.5s forwards; }
+      /* role pill */
+      .line-role { opacity: 0; animation: appear 0.1s 1.9s forwards; }
+      /* line 2 prompt + json */
+      .line2      { opacity: 0; animation: appear 0.1s 2.4s forwards; }
+      .line-json  { opacity: 0; animation: appear 0.1s 2.8s forwards; }
+      /* final prompt */
+      .line3 { opacity: 0; animation: appear 0.1s 3.4s forwards; }
+
+      @keyframes appear {
+        to { opacity: 1; }
+      }
+
+      /* glitch on name */
+      .glitch1 {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 72px;
+        font-weight: 800;
+        fill: #00ffcc;
+        clip-path: inset(0 0 62% 0);
+        animation: glitch1 6s 4s infinite;
+        opacity: 0;
+      }
+      .glitch2 {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 72px;
+        font-weight: 800;
+        fill: #3DDC84;
+        clip-path: inset(65% 0 0 0);
+        animation: glitch2 6s 4.1s infinite;
+        opacity: 0;
+      }
+      @keyframes glitch1 {
+        0%,91%,100% { transform: none; opacity: 0; }
+        92% { transform: translate(-4px, 1px); opacity: 0.7; }
+        93% { transform: translate(4px, -2px); opacity: 0.7; }
+        94% { transform: translate(-2px, 3px); opacity: 0.7; }
+        95% { transform: none; opacity: 0; }
+      }
+      @keyframes glitch2 {
+        0%,91%,100% { transform: none; opacity: 0; }
+        92% { transform: translate(4px, -1px); opacity: 0.5; }
+        93% { transform: translate(-4px, 2px); opacity: 0.5; }
+        94% { transform: translate(2px, -3px); opacity: 0.5; }
+        95% { transform: none; opacity: 0; }
+      }
+
+      /* blinking block cursor */
+      .cursor-block {
+        fill: #3DDC84;
+        animation: blinkBlock 1s step-end infinite;
+        filter: url(#glow);
+      }
+      @keyframes blinkBlock {
+        0%,100% { opacity: 1; } 50% { opacity: 0; }
+      }
+
+      /* blinking dot */
+      .blink-dot {
+        animation: blinkDot 1.4s ease-in-out infinite;
+      }
+      @keyframes blinkDot {
+        0%,100% { opacity: 1; } 50% { opacity: 0.15; }
+      }
+
+      /* scanline sweep */
+      .sweep {
+        animation: sweep 4s linear infinite;
+      }
+      @keyframes sweep {
+        0%   { transform: translateX(-900px); }
+        100% { transform: translateX(900px); }
+      }
+    </style>
+
+    <!-- glow filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softglow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- grid pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#3DDC84" stroke-width="0.5" stroke-opacity="0.04"/>
+    </pattern>
+  </defs>
+
+  <!-- ── BACKGROUND ── -->
+  <rect width="900" height="420" class="bg"/>
+  <rect width="900" height="420" fill="url(#grid)"/>
+
+  <!-- scanlines overlay -->
+  <rect width="900" height="420" fill="none"
+    style="stroke:none;"
+    opacity="0.06">
+    <animate attributeName="opacity" values="0.06;0.06" dur="1s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- ── TERMINAL WINDOW ── -->
+  <g class="terminal-group">
+
+    <!-- terminal box -->
+    <rect x="24" y="20" width="852" height="380" rx="14" class="terminal-border"/>
+
+    <!-- title bar -->
+    <rect x="24" y="20" width="852" height="42" rx="14" class="titlebar"/>
+    <rect x="24" y="48" width="852" height="14" class="titlebar"/>
+    <rect x="24" y="61" width="852" height="1" fill="#ffffff" opacity="0.06"/>
+
+    <!-- traffic lights -->
+    <circle cx="52" cy="41" r="6" class="btn-r" filter="url(#softglow)"/>
+    <circle cx="72" cy="41" r="6" class="btn-y" filter="url(#softglow)"/>
+    <circle cx="92" cy="41" r="6" class="btn-g" filter="url(#softglow)"/>
+
+    <!-- title bar label -->
+    <text x="450" y="46" text-anchor="middle" class="term-title">bash — zsh — 80×24</text>
+    <!-- SSH badge -->
+    <text x="848" y="46" text-anchor="end" class="ssh-badge">SSH ●</text>
+
+    <!-- top sweep line -->
+    <line x1="24" y1="62" x2="876" y2="62" stroke="#3DDC84" stroke-width="1" opacity="0.12"/>
+    <!-- animated scan -->
+    <line class="scanline sweep" x1="0" y1="62" x2="900" y2="62"/>
+
+    <!-- ── LINE 1: whoami prompt ── -->
+    <g class="line1">
+      <text x="44" y="100">
+        <tspan class="p-root">root</tspan><tspan class="p-at">@</tspan><tspan class="p-host">github</tspan><tspan class="p-at">:</tspan><tspan class="p-path">~/profile</tspan><tspan class="p-hash"> # </tspan><tspan class="p-cmd">whoami </tspan><tspan class="p-flag">--verbose</tspan>
+      </text>
+    </g>
+
+    <!-- ── NAME ── -->
+    <g class="line-name">
+      <!-- glitch layers -->
+      <text x="44" y="192" class="glitch1">MOHAMAD</text>
+      <text x="44" y="192" class="glitch2">MOHAMAD</text>
+      <!-- main name -->
+      <text x="44" y="192" class="name-text">MOHAMAD</text>
+    </g>
+
+    <!-- ── NICKNAME ── -->
+    <g class="line-nick">
+      <text x="44" y="220" class="nick-text"><tspan class="at-green">@</tspan>M_One</text>
+    </g>
+
+    <!-- ── ROLE PILL ── -->
+    <g class="line-role">
+      <rect x="44" y="232" width="210" height="28" rx="6" fill="#3DDC84" fill-opacity="0.08" stroke="#3DDC84" stroke-width="1" stroke-opacity="0.3"/>
+      <circle cx="60" cy="246" r="4" class="dot blink-dot" filter="url(#softglow)"/>
+      <text x="72" y="250" class="role-text">Android Developer</text>
+    </g>
+
+    <!-- ── LINE 2: cat identity ── -->
+    <g class="line2">
+      <text x="44" y="284">
+        <tspan class="p-root">root</tspan><tspan class="p-at">@</tspan><tspan class="p-host">github</tspan><tspan class="p-at">:</tspan><tspan class="p-path">~/profile</tspan><tspan class="p-hash"> # </tspan><tspan class="p-cmd">cat </tspan><tspan style="font-family:'JetBrains Mono',monospace;font-size:13px;fill:#f97316;">identity.json</tspan>
+      </text>
+    </g>
+
+    <!-- ── JSON OUTPUT ── -->
+    <g class="line-json">
+      <text x="44" y="306" class="json-bracket">{</text>
+
+      <text x="60" y="323">
+        <tspan class="json-key">"name"</tspan><tspan class="json-colon">: </tspan><tspan class="json-str">"Mohamad"</tspan><tspan class="json-colon">,</tspan>
+      </text>
+      <text x="60" y="339">
+        <tspan class="json-key">"alias"</tspan><tspan class="json-colon">: </tspan><tspan class="json-str">"M_One"</tspan><tspan class="json-colon">,</tspan>
+      </text>
+      <text x="60" y="355">
+        <tspan class="json-key">"role"</tspan><tspan class="json-colon">: </tspan><tspan class="json-str">"Android Developer"</tspan><tspan class="json-colon">,</tspan>
+      </text>
+      <text x="60" y="371">
+        <tspan class="json-key">"status"</tspan><tspan class="json-colon">: </tspan><tspan class="json-green">"🟢 Building in production"</tspan>
+      </text>
+
+      <text x="44" y="387" class="json-bracket">}</text>
+    </g>
+
+    <!-- ── LINE 3: final prompt + cursor ── -->
+    <g class="line3">
+      <text x="44" y="406">
+        <tspan class="p-root">root</tspan><tspan class="p-at">@</tspan><tspan class="p-host">github</tspan><tspan class="p-at">:</tspan><tspan class="p-path">~/profile</tspan><tspan class="p-hash"> # </tspan>
+      </text>
+      <rect x="208" y="392" width="10" height="17" class="cursor-block"/>
+    </g>
+
+  </g>
+</svg>
