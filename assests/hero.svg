@@ -1,18 +1,15 @@
-<svg width="900" height="480" viewBox="0 0 900 480" xmlns="http://www.w3.org/2000/svg">
+<svg width="900" height="340" viewBox="0 0 900 340" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
       .bg { fill: #0d0d0d; }
       .term-box { fill: #0a0a0a; stroke: #3DDC84; stroke-width: 1; stroke-opacity: 0.25; }
       .titlebar { fill: #111111; }
-
       .btn-r { fill: #ff5f57; }
       .btn-y { fill: #febc2e; }
       .btn-g { fill: #28c840; }
-
       text { font-family: 'JetBrains Mono', 'Courier New', monospace; }
-
       .term-label { font-size: 11px; fill: #555; }
-      .ssh        { font-size: 10px; fill: #3DDC84; opacity: 0.55; }
+      .ssh { font-size: 10px; fill: #3DDC84; opacity: 0.55; }
 
       .p-root { font-size: 13px; font-weight: bold; fill: #3DDC84; }
       .p-at   { font-size: 13px; fill: #444; }
@@ -21,8 +18,8 @@
       .p-hash { font-size: 13px; font-weight: bold; fill: #3DDC84; }
       .p-cmd  { font-size: 13px; fill: #fff; }
       .p-flag { font-size: 13px; fill: #febc2e; }
-      .p-file { font-size: 13px; fill: #f97316; }
 
+      /* BIG NAME */
       .big-name { font-size: 74px; font-weight: bold; fill: #3DDC84; }
       .glitch-a { font-size: 74px; font-weight: bold; fill: #00ffcc; opacity: 0;
         animation: g1 7s 3.5s infinite; clip-path: inset(0 0 60% 0); }
@@ -43,42 +40,64 @@
         94%{transform:none;opacity:0}
       }
 
-      .nick   { font-size: 16px; font-weight: bold; fill: #79c0ff; letter-spacing: 5px; }
-      .nick-at{ fill: #3DDC84; }
+      .nick { font-size: 16px; font-weight: bold; fill: #79c0ff; letter-spacing: 5px; }
+      .nick-at { fill: #3DDC84; }
 
-      .role-text { font-size: 12px; fill: #3DDC84; letter-spacing: 2px; }
-      .dot { fill: #3DDC84; animation: bd 1.4s ease-in-out infinite; }
+      /* BIG ROLE */
+      .big-role   { font-size: 38px; font-weight: bold; fill: #fff; letter-spacing: 2px; }
+      .big-role-g { font-size: 38px; font-weight: bold; fill: #3DDC84; letter-spacing: 2px; }
+
+      /* role glitch */
+      .role-glitch-a { font-size: 38px; font-weight: bold; fill: #00ffcc; opacity: 0; letter-spacing: 2px;
+        animation: rg1 8s 5s infinite; clip-path: inset(0 0 55% 0); }
+      .role-glitch-b { font-size: 38px; font-weight: bold; fill: #ff6ac1; opacity: 0; letter-spacing: 2px;
+        animation: rg2 8s 5.1s infinite; clip-path: inset(58% 0 0 0); }
+      @keyframes rg1 {
+        0%,88%,100%{transform:none;opacity:0}
+        89%{transform:translate(-4px,1px);opacity:.6}
+        90%{transform:translate(4px,-1px);opacity:.6}
+        91%{transform:none;opacity:0}
+      }
+      @keyframes rg2 {
+        0%,88%,100%{transform:none;opacity:0}
+        89%{transform:translate(4px,-1px);opacity:.4}
+        90%{transform:translate(-4px,1px);opacity:.4}
+        91%{transform:none;opacity:0}
+      }
+
+      /* typing reveal via clipPath animation */
+      #typeReveal { animation: typeW 2s steps(18, end) 1.8s both; }
+      @keyframes typeW { from { width: 0; } to { width: 520px; } }
+
+      /* blinking cursor */
+      .role-cursor { animation: blink 0.9s step-end infinite; }
+      @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+      .dot-blink { animation: bd 1.4s ease-in-out infinite; }
       @keyframes bd { 0%,100%{opacity:1} 50%{opacity:.1} }
-
-      .cursor { fill: #3DDC84; animation: bc 1s step-end infinite; }
-      @keyframes bc { 0%,100%{opacity:1} 50%{opacity:0} }
-
-      .sec-label { font-size: 10px; fill: #3DDC84; letter-spacing: 4px; opacity: 0.7; }
-      .div-line  { stroke: #3DDC84; stroke-width: 0.5; stroke-opacity: 0.2; }
-
-      .jk { font-size: 12px; fill: #79c0ff; }
-      .jc { font-size: 12px; fill: #555; }
-      .js { font-size: 12px; fill: #f97316; }
-      .jg { font-size: 12px; fill: #3DDC84; }
-      .jb { font-size: 12px; fill: #555; }
 
       .sweep { animation: sw 4s linear infinite; }
       @keyframes sw { 0%{transform:translateX(-900px)} 100%{transform:translateX(900px)} }
 
-      .r0  { opacity:0; animation: ap .05s .3s forwards; }
-      .r1  { opacity:0; animation: ap .05s .9s forwards; }
-      .r2  { opacity:0; animation: ap .05s 1.4s forwards; }
-      .r3  { opacity:0; animation: ap .05s 1.8s forwards; }
-      .r4  { opacity:0; animation: ap .05s 2.3s forwards; }
-      .r5  { opacity:0; animation: ap .05s 2.7s forwards; }
+      .r0 { opacity:0; animation: ap .05s .3s forwards; }
+      .r1 { opacity:0; animation: ap .05s .9s forwards; }
+      .r2 { opacity:0; animation: ap .05s 1.4s forwards; }
+      .r3 { opacity:0; animation: ap .05s 1.8s forwards; }
+      .r4 { opacity:0; animation: ap .05s 2.5s forwards; }
       @keyframes ap { to { opacity:1; } }
 
       .fade-in { opacity:0; animation: fadeIn 1s .2s ease forwards; }
       @keyframes fadeIn { to { opacity:1; } }
+
+      .div-line { stroke: #3DDC84; stroke-width: 0.5; stroke-opacity: 0.2; }
     </style>
 
     <filter id="glow">
       <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="roleglow">
+      <feGaussianBlur stdDeviation="5" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
     <filter id="sglow">
@@ -89,17 +108,18 @@
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
       <path d="M40 0L0 0 0 40" fill="none" stroke="#3DDC84" stroke-width="0.4" stroke-opacity="0.04"/>
     </pattern>
+
+    <!-- typing clip: starts at x=190 (center 450 minus half of ~520=260 => 190), grows right -->
+    <clipPath id="roleClip">
+      <rect id="typeReveal" x="190" y="220" height="55"/>
+    </clipPath>
   </defs>
 
-  <!-- BG -->
-  <rect width="900" height="480" class="bg"/>
-  <rect width="900" height="480" fill="url(#grid)"/>
+  <rect width="900" height="340" class="bg"/>
+  <rect width="900" height="340" fill="url(#grid)"/>
 
-  <!-- TERMINAL WINDOW -->
   <g class="fade-in">
-    <rect x="20" y="16" width="860" height="448" rx="14" class="term-box"/>
-
-    <!-- titlebar -->
+    <rect x="20" y="16" width="860" height="308" rx="14" class="term-box"/>
     <rect x="20" y="16" width="860" height="44" rx="14" class="titlebar"/>
     <rect x="20" y="44" width="860" height="16" class="titlebar"/>
     <rect x="20" y="59" width="860" height="1" fill="#fff" opacity="0.05"/>
@@ -110,69 +130,51 @@
 
     <text x="450" y="43" text-anchor="middle" class="term-label">bash — zsh — 80×24</text>
     <text x="856" y="43" text-anchor="end" class="ssh">SSH ●</text>
-
-    <!-- sweep scanline -->
     <line class="sweep" x1="0" y1="60" x2="900" y2="60" stroke="#3DDC84" stroke-width="1" opacity="0.35"/>
 
-    <!-- ════════════════════════════════ -->
-    <!-- SECTION 1 — HERO  (centered)   -->
-    <!-- ════════════════════════════════ -->
-
-    <!-- prompt line 1 — centered -->
+    <!-- prompt -->
     <g class="r0">
-      <text x="450" y="98" text-anchor="middle">
+      <text x="450" y="95" text-anchor="middle">
         <tspan class="p-root">root</tspan><tspan class="p-at">@</tspan><tspan class="p-host">github</tspan><tspan class="p-at">:</tspan><tspan class="p-path">~/profile</tspan><tspan class="p-hash">  #  </tspan><tspan class="p-cmd">whoami </tspan><tspan class="p-flag">--verbose</tspan>
       </text>
     </g>
 
-    <!-- BIG NAME — centered -->
+    <!-- BIG NAME -->
     <g class="r1">
-      <text x="450" y="188" text-anchor="middle" class="glitch-a">MOHAMAD</text>
-      <text x="450" y="188" text-anchor="middle" class="glitch-b">MOHAMAD</text>
-      <text x="450" y="188" text-anchor="middle" class="big-name" filter="url(#glow)">MOHAMAD</text>
+      <text x="450" y="180" text-anchor="middle" class="glitch-a">MOHAMAD</text>
+      <text x="450" y="180" text-anchor="middle" class="glitch-b">MOHAMAD</text>
+      <text x="450" y="180" text-anchor="middle" class="big-name" filter="url(#glow)">MOHAMAD</text>
     </g>
 
-    <!-- nickname — centered -->
+    <!-- nickname -->
     <g class="r2">
-      <text x="450" y="214" text-anchor="middle" class="nick"><tspan class="nick-at">@</tspan>M_One</text>
+      <text x="450" y="204" text-anchor="middle" class="nick"><tspan class="nick-at">@</tspan>M_One</text>
+      <line x1="160" y1="216" x2="740" y2="216" class="div-line"/>
     </g>
 
-    <!-- role pill — centered -->
+    <!-- BIG ROLE with typing clip -->
     <g class="r3">
-      <rect x="342" y="225" width="216" height="28" rx="6" class="pill-bg"/>
-      <circle cx="359" cy="239" r="4" class="dot" filter="url(#sglow)"/>
-      <text x="371" y="243" class="role-text">Android Developer</text>
-    </g>
-
-    <!-- divider -->
-    <g class="r3">
-      <line x1="40" y1="268" x2="860" y2="268" class="div-line"/>
-      <text x="450" y="264" text-anchor="middle" class="sec-label">◈  CAT IDENTITY.JSON  ◈</text>
-    </g>
-
-    <!-- ════════════════════════════════ -->
-    <!-- SECTION 2 — IDENTITY (centered)-->
-    <!-- ════════════════════════════════ -->
-
-    <g class="r4">
-      <text x="450" y="294" text-anchor="middle">
-        <tspan class="p-root">root</tspan><tspan class="p-at">@</tspan><tspan class="p-host">github</tspan><tspan class="p-at">:</tspan><tspan class="p-path">~/profile</tspan><tspan class="p-hash">  #  </tspan><tspan class="p-cmd">cat </tspan><tspan class="p-file">identity.json</tspan>
+      <!-- glitch layers, same clip -->
+      <text x="450" y="258" text-anchor="middle" class="role-glitch-a" clip-path="url(#roleClip)">Android Developer</text>
+      <text x="450" y="258" text-anchor="middle" class="role-glitch-b" clip-path="url(#roleClip)">Android Developer</text>
+      <!-- main role text -->
+      <text x="450" y="258" text-anchor="middle" filter="url(#roleglow)" clip-path="url(#roleClip)">
+        <tspan class="big-role">Android </tspan><tspan class="big-role-g">Developer</tspan>
       </text>
+
+      <!-- cursor: small rect that appears after typing, blinks inline -->
+      <!-- "Android Developer" at 38px bold ~= 490px wide, half = 245, so right edge at 450+245=695 -->
+      <!-- cursor sits at 698 -->
+      <rect x="698" y="232" width="10" height="30" rx="1" fill="#3DDC84" class="role-cursor" filter="url(#sglow)"
+            opacity="0">
+        <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.52;0.53;1" dur="2s" begin="1.8s" fill="freeze"/>
+      </rect>
     </g>
 
-    <g class="r5">
-      <!-- JSON block centered — block width ~460, so start at x=220 -->
-      <text x="220" y="316" class="jb">{</text>
-      <text x="236" y="334"><tspan class="jk">"name"</tspan><tspan class="jc">:     </tspan><tspan class="js">"Mohamad"</tspan><tspan class="jc">,</tspan></text>
-      <text x="236" y="352"><tspan class="jk">"alias"</tspan><tspan class="jc">:    </tspan><tspan class="js">"M_One"</tspan><tspan class="jc">,</tspan></text>
-      <text x="236" y="370"><tspan class="jk">"role"</tspan><tspan class="jc">:     </tspan><tspan class="js">"Android Developer"</tspan><tspan class="jc">,</tspan></text>
-      <text x="236" y="388"><tspan class="jk">"focus"</tspan><tspan class="jc">:    </tspan><tspan class="js">"Native · Kotlin · Compose"</tspan><tspan class="jc">,</tspan></text>
-      <text x="236" y="406"><tspan class="jk">"motto"</tspan><tspan class="jc">:    </tspan><tspan class="jg">"Write code that survives the test of time."</tspan><tspan class="jc">,</tspan></text>
-      <text x="236" y="424"><tspan class="jk">"status"</tspan><tspan class="jc">:   </tspan><tspan class="jg">"🟢 Building in production"</tspan></text>
-      <text x="220" y="442" class="jb">}</text>
-
-      <!-- blinking cursor at end -->
-      <rect x="600" y="428" width="10" height="16" class="cursor" filter="url(#sglow)"/>
+    <!-- status -->
+    <g class="r4">
+      <circle cx="388" cy="291" r="5" fill="#3DDC84" class="dot-blink" filter="url(#sglow)"/>
+      <text x="400" y="296" font-family="'JetBrains Mono','Courier New',monospace" font-size="13" fill="#8892a4" letter-spacing="2">Building in production</text>
     </g>
 
   </g>
