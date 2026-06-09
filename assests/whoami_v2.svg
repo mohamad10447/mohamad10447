@@ -1,0 +1,189 @@
+<svg width="900" height="320" viewBox="0 0 900 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      text { font-family: 'JetBrains Mono', 'Courier New', monospace; }
+
+      /* ── animations ── */
+      .fade-in  { opacity:0; animation: fi 1s .1s ease forwards; }
+      @keyframes fi { to { opacity:1; } }
+
+      .r0 { opacity:0; animation: ap .05s .3s  forwards; }
+      .r1 { opacity:0; animation: ap .05s .8s  forwards; }
+      .r2 { opacity:0; animation: ap .05s 1.2s forwards; }
+      .r3 { opacity:0; animation: ap .05s 1.6s forwards; }
+      .r4 { opacity:0; animation: ap .05s 2.0s forwards; }
+      .r5 { opacity:0; animation: ap .05s 2.4s forwards; }
+      @keyframes ap { to { opacity:1; } }
+
+      .dot-pulse { animation: dp 2s ease-in-out infinite; }
+      @keyframes dp { 0%,100%{opacity:1} 50%{opacity:.2} }
+
+      .bar-fill  { animation: barGrow 1.2s cubic-bezier(.4,0,.2,1) forwards; }
+      .bar-fill-2{ animation: barGrow 1.2s .2s cubic-bezier(.4,0,.2,1) forwards; }
+      .bar-fill-3{ animation: barGrow 1.2s .4s cubic-bezier(.4,0,.2,1) forwards; }
+      @keyframes barGrow { from { width: 0; } }
+
+      /* card border glow pulse */
+      .card-glow { animation: cg 3s ease-in-out infinite alternate; }
+      @keyframes cg { from { opacity:.18; } to { opacity:.38; } }
+    </style>
+
+    <filter id="sglow">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="cardglow">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="textglow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#3DDC84" opacity="0.06"/>
+    </pattern>
+
+    <!-- gradient for bars -->
+    <linearGradient id="barG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#1a5c3a"/>
+      <stop offset="100%" stop-color="#3DDC84"/>
+    </linearGradient>
+    <linearGradient id="barB" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#1a2f5c"/>
+      <stop offset="100%" stop-color="#79c0ff"/>
+    </linearGradient>
+    <linearGradient id="barP" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#2d1a5c"/>
+      <stop offset="100%" stop-color="#cc99ff"/>
+    </linearGradient>
+
+    <!-- card bg gradient -->
+    <linearGradient id="cardBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#111318"/>
+      <stop offset="100%" stop-color="#0d0f12"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ── background ── -->
+  <rect width="900" height="320" fill="#0b0d10"/>
+  <rect width="900" height="320" fill="url(#dots)"/>
+
+  <g class="fade-in">
+
+    <!-- ══════════════════════════════════════
+         LEFT CARD  —  Who I Am
+    ══════════════════════════════════════ -->
+    <!-- glow halo -->
+    <rect x="22" y="22" width="390" height="276" rx="16" fill="#3DDC84" opacity="0.04" filter="url(#cardglow)" class="card-glow"/>
+    <!-- card -->
+    <rect x="22" y="22" width="390" height="276" rx="16" fill="url(#cardBg)" stroke="#3DDC84" stroke-width="1" stroke-opacity="0.2"/>
+    <!-- top accent bar -->
+    <rect x="22" y="22" width="390" height="3" rx="2" fill="#3DDC84" opacity="0.6"/>
+
+    <!-- avatar circle -->
+    <g class="r0">
+      <circle cx="78" cy="82" r="32" fill="#0d0d0d" stroke="#3DDC84" stroke-width="1.5" stroke-opacity="0.4"/>
+      <!-- M glyph inside -->
+      <text x="78" y="89" text-anchor="middle" font-size="28" font-weight="bold" fill="#3DDC84" font-family="'JetBrains Mono','Courier New',monospace" filter="url(#sglow)">M</text>
+      <!-- online dot -->
+      <circle cx="102" cy="106" r="7" fill="#0b0d10"/>
+      <circle cx="102" cy="106" r="5" fill="#3DDC84" class="dot-pulse" filter="url(#sglow)"/>
+    </g>
+
+    <!-- name block -->
+    <g class="r1">
+      <text x="124" y="72" font-size="22" font-weight="bold" fill="#ffffff" font-family="'JetBrains Mono','Courier New',monospace" filter="url(#textglow)">Mohamad</text>
+      <text x="124" y="92" font-size="12" fill="#3DDC84" font-family="'JetBrains Mono','Courier New',monospace" letter-spacing="3">@M_One</text>
+      <!-- role badge -->
+      <rect x="124" y="100" width="172" height="22" rx="11" fill="#3DDC84" fill-opacity="0.1" stroke="#3DDC84" stroke-width="1" stroke-opacity="0.3"/>
+      <text x="210" y="115" text-anchor="middle" font-size="11" fill="#3DDC84" font-family="'JetBrains Mono','Courier New',monospace" letter-spacing="1">Android Developer</text>
+    </g>
+
+    <!-- divider -->
+    <g class="r1">
+      <line x1="40" y1="136" x2="394" y2="136" stroke="#3DDC84" stroke-width="0.5" stroke-opacity="0.15"/>
+    </g>
+
+    <!-- info rows -->
+    <g class="r2">
+      <!-- row 1 -->
+      <text x="40" y="162" font-size="11" fill="#444" font-family="'JetBrains Mono','Courier New',monospace">▸ BUILDING</text>
+      <text x="140" y="162" font-size="11" fill="#e2e8f0" font-family="'JetBrains Mono','Courier New',monospace">Offline-first Android apps</text>
+      <!-- row 2 -->
+      <text x="40" y="184" font-size="11" fill="#444" font-family="'JetBrains Mono','Courier New',monospace">▸ LEARNING</text>
+      <text x="140" y="184" font-size="11" fill="#79c0ff" font-family="'JetBrains Mono','Courier New',monospace">Kotlin Multiplatform</text>
+      <!-- row 3 -->
+      <text x="40" y="206" font-size="11" fill="#444" font-family="'JetBrains Mono','Courier New',monospace">▸ NEXT</text>
+      <text x="140" y="206" font-size="11" fill="#cc99ff" font-family="'JetBrains Mono','Courier New',monospace">Open source contributions</text>
+    </g>
+
+    <!-- divider -->
+    <g class="r2">
+      <line x1="40" y1="220" x2="394" y2="220" stroke="#3DDC84" stroke-width="0.5" stroke-opacity="0.15"/>
+    </g>
+
+    <!-- fun fact -->
+    <g class="r3">
+      <text x="40" y="242" font-size="10" fill="#444" font-family="'JetBrains Mono','Courier New',monospace" letter-spacing="2">FUN FACT</text>
+      <text x="40" y="260" font-size="11" fill="#8892a4" font-family="'JetBrains Mono','Courier New',monospace">I refactor code at 2am and call it</text>
+      <text x="40" y="276" font-size="11" fill="#3DDC84" font-family="'JetBrains Mono','Courier New',monospace">"productivity"  ✦</text>
+    </g>
+
+
+    <!-- ══════════════════════════════════════
+         RIGHT CARD  —  Stack / Focus
+    ══════════════════════════════════════ -->
+    <rect x="488" y="22" width="390" height="276" rx="16" fill="#3DDC84" opacity="0.04" filter="url(#cardglow)" class="card-glow"/>
+    <rect x="488" y="22" width="390" height="276" rx="16" fill="url(#cardBg)" stroke="#3DDC84" stroke-width="1" stroke-opacity="0.2"/>
+    <rect x="488" y="22" width="390" height="3" rx="2" fill="#79c0ff" opacity="0.6"/>
+
+    <!-- card title -->
+    <g class="r1">
+      <text x="506" y="58" font-size="11" fill="#79c0ff" font-family="'JetBrains Mono','Courier New',monospace" letter-spacing="4">TECH FOCUS</text>
+      <line x1="506" y1="66" x2="860" y2="66" stroke="#79c0ff" stroke-width="0.5" stroke-opacity="0.15"/>
+    </g>
+
+    <!-- skill bars -->
+    <g class="r3">
+      <!-- Kotlin -->
+      <text x="506" y="92"  font-size="12" fill="#e2e8f0" font-family="'JetBrains Mono','Courier New',monospace">Kotlin</text>
+      <text x="854" y="92"  text-anchor="end" font-size="11" fill="#3DDC84" font-family="'JetBrains Mono','Courier New',monospace">95%</text>
+      <rect x="506" y="97"  width="348" height="6" rx="3" fill="#ffffff" fill-opacity="0.05"/>
+      <rect x="506" y="97"  width="330" height="6" rx="3" fill="url(#barG)" class="bar-fill" filter="url(#sglow)"/>
+
+      <!-- Jetpack Compose -->
+      <text x="506" y="122" font-size="12" fill="#e2e8f0" font-family="'JetBrains Mono','Courier New',monospace">Jetpack Compose</text>
+      <text x="854" y="122" text-anchor="end" font-size="11" fill="#3DDC84" font-family="'JetBrains Mono','Courier New',monospace">90%</text>
+      <rect x="506" y="127" width="348" height="6" rx="3" fill="#ffffff" fill-opacity="0.05"/>
+      <rect x="506" y="127" width="313" height="6" rx="3" fill="url(#barG)" class="bar-fill-2" filter="url(#sglow)"/>
+
+      <!-- Coroutines + Flow -->
+      <text x="506" y="152" font-size="12" fill="#e2e8f0" font-family="'JetBrains Mono','Courier New',monospace">Coroutines + Flow</text>
+      <text x="854" y="152" text-anchor="end" font-size="11" fill="#79c0ff" font-family="'JetBrains Mono','Courier New',monospace">88%</text>
+      <rect x="506" y="157" width="348" height="6" rx="3" fill="#ffffff" fill-opacity="0.05"/>
+      <rect x="506" y="157" width="306" height="6" rx="3" fill="url(#barB)" class="bar-fill-3" filter="url(#sglow)"/>
+
+      <!-- Clean Architecture -->
+      <text x="506" y="182" font-size="12" fill="#e2e8f0" font-family="'JetBrains Mono','Courier New',monospace">Clean Architecture</text>
+      <text x="854" y="182" text-anchor="end" font-size="11" fill="#79c0ff" font-family="'JetBrains Mono','Courier New',monospace">85%</text>
+      <rect x="506" y="187" width="348" height="6" rx="3" fill="#ffffff" fill-opacity="0.05"/>
+      <rect x="506" y="187" width="295" height="6" rx="3" fill="url(#barB)" class="bar-fill" filter="url(#sglow)"/>
+
+      <!-- KMP -->
+      <text x="506" y="212" font-size="12" fill="#e2e8f0" font-family="'JetBrains Mono','Courier New',monospace">Kotlin Multiplatform</text>
+      <text x="854" y="212" text-anchor="end" font-size="11" fill="#cc99ff" font-family="'JetBrains Mono','Courier New',monospace">60%</text>
+      <rect x="506" y="217" width="348" height="6" rx="3" fill="#ffffff" fill-opacity="0.05"/>
+      <rect x="506" y="217" width="208" height="6" rx="3" fill="url(#barP)" class="bar-fill-2" filter="url(#sglow)"/>
+    </g>
+
+    <!-- motto -->
+    <g class="r5">
+      <line x1="506" y1="238" x2="860" y2="238" stroke="#3DDC84" stroke-width="0.5" stroke-opacity="0.15"/>
+      <text x="682" y="260" text-anchor="middle" font-size="11" fill="#444" font-family="'JetBrains Mono','Courier New',monospace" font-style="italic">"Write code that survives the test of time."</text>
+      <text x="682" y="278" text-anchor="middle" font-size="10" fill="#3DDC84" font-family="'JetBrains Mono','Courier New',monospace" letter-spacing="2" opacity="0.6">— M_One</text>
+    </g>
+
+  </g>
+</svg>
